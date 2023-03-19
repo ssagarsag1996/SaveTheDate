@@ -96,9 +96,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1 style=" padding-top: 70px;">Ajith Kumar</h1>
-                                <h1>&amp;</h1>
-                                <h1>Sajitha</h1>
+                                <h1>Ajith Kumar &amp; Sajitha</h1>                              
                                 <h2>We Are Getting Married</h2>
                                 <div class="simply-countdown simply-countdown-one"></div>
                                 <p><a id="savethedate" href="#" class="btn btn-default btn-sm" onclick="$('#weddingmusic').trigger('play')">Save the date</a></p>
@@ -594,8 +592,10 @@
     <script src="js/main.js"></script>
 
     <script>
+        $(function () { $('#savethedate').focus(); });
+        $('#savethedate').on('focusout', function () { $('#weddingmusic').trigger("play");})
         window.onscroll = function () {
-            $('#weddingmusic').trigger("play");
+            //$('#weddingmusic').trigger("play");
         }
         var d = new Date("2023-05-03");
         // default example
